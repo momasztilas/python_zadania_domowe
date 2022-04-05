@@ -30,5 +30,7 @@ elif wiek >= 65 and dlugosc_pobytu > 5:
     cena_pobytu = ((cena_doby_default * 0.75) * dlugosc_pobytu) * 0.9
 
 # mało zgrabne rozwiązanie, ale działa, wiem, że da się to inaczej zrobić, bez powtarzania kodu
-
-print(f'Cena za pobyt w hotelu przez {dlugosc_pobytu} dni wynosi : {cena_pobytu:.2f} zł.')
+if  wiek >= 65:
+    print(f'Cena za pobyt w hotelu przez {dlugosc_pobytu} dni, z rabatem emeryta, wynosi : {cena_pobytu:.2f} zł.')
+else:
+    print(f'Cena za pobyt w hotelu przez {dlugosc_pobytu} dni wynosi : {cena_pobytu:.2f} zł.')
