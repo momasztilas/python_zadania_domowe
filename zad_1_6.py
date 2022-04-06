@@ -10,16 +10,16 @@ ilosc = int(input('Podaj ilość biletów: '))
 if wiek > 0 and ilosc > 0:
     if 0 <= wiek <= 6:
         cena_biletu = 0
-        typ = "ulga przedszkolaka"
+        typ = 'ulga przedszkolaka'
     elif 7 <= wiek <= 17:
         cena_biletu = 2.28
-        typ = "ulga szkolna"
+        typ = 'ulga szkolna'
     elif 18 <= wiek <= 64:
         cena_biletu = 3.8
-        typ = "brak"
+        typ = 'brak'
     elif 65 <= wiek:
         cena_biletu = 1.9
-        typ = "ulga emeryta"
+        typ = 'ulga emeryta'
     cena = ilosc * cena_biletu
     print(f'Ilość kupionych biletów to: {ilosc}\nRodzaj zastosowanej ulgi: {typ}\nDo zapłaty: {cena:.2f} zł')
 else:
