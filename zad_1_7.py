@@ -8,4 +8,6 @@ Za ziemniaki, który chcesz kupić, zapłacisz 50 zł"""
 
 towar = str(input('Co chcesz kupić? '))
 cena = float(input('Podaj cenę towaru za kg w zł: '))
-ilosc = input('Podaj ilość towaru')
+ilosc = float(input('Podaj ilość towaru w kg: '))
+
+print (f'Za {towar} o wadze {ilosc} kg, zapłacisz {cena * ilosc:.2f} zł.')
