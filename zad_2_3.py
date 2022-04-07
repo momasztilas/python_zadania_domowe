@@ -19,6 +19,7 @@ i = 1
 
 while i <= 10:
     liczba = int(input(f'Wprowadź liczbę nr {i}: '))
+    # jak inaczej wprowadzić wartości, bez użycia wbudowanego input?
     i += 1
     liczby.append(liczba)
 def mymax(liczby):
