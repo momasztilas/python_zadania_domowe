@@ -5,6 +5,8 @@ Użytkownik ma odgadnąć (no, policzyć w głowie) wynik.
 Program pyta o wynik wielokrotnie, tak długo, aż użytkownik poda prawidłowy wynik.
 
 """
+
+
 import random
 liczba_1 = (random.randint(0,99))
 liczba_2 = (random.randint(0,99))
@@ -15,7 +17,7 @@ suma_pytanie = int(input('Jak myślisz, jaka jest suma? '))
 while suma_pytanie != suma_realna:
     suma_pytanie = input(f'Wpisana suma to {suma_pytanie}. Nie zgadłeś, próbuj dalej: ')
 else:
-        print(f'Gratulacje, udało Ci się odgadnąć sumę: {suma_realna}')
+    print(f'Gratulacje, udało Ci się odgadnąć sumę: {suma_realna}')
 
 
 
