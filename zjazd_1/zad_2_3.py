@@ -22,12 +22,13 @@ while i <= 10:
     # jak inaczej wprowadzić wartości, bez użycia wbudowanego input?
     i += 1
     liczby.append(liczba)
+
 def mymax(liczby):
     max = liczby[0]
     for x in liczby:
         if x > max:
             max = x
-    return max
+        return max
 def mymin(liczby):
     min = liczby[0]
     for y in liczby:
