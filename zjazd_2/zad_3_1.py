@@ -78,3 +78,5 @@ def funkcja_pole_kola():
 
 
 funkcja_pole_kola()
+
+
