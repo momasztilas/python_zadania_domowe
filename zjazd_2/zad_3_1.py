@@ -102,7 +102,7 @@ def funkcja_pole_trojkata():
         print(f'\nSpróbuj ponownie.')
 
 
-# kilometry_na_mile - przelicza odległość wyrażoną w kilometrach na mile
+# kilometry_na_mile - przelicza odległość wyrażoną w kilometrach na mile, treningowo z
 
 def funkcja_km_mile(km: float) -> float:
     """
@@ -152,6 +152,7 @@ elif task == "5" or task == "operacja 5":
 elif task == "6" or task == "operacja 6":
     funkcja_pole_trojkata()
 elif task == "7" or task == "operacja 7":
+    # troche inne wywolanie funkcji 7 i 8
     operacja7 = funkcja_km_mile(float(input(f'Wprowadź liczbę kilometrów: ')))
     print(f'Wprowadzoną odległość w kilometrach przeliczono na {operacja7:.2f} mi.')
 elif task == "8" or task == "operacja 8":
@@ -159,4 +160,3 @@ elif task == "8" or task == "operacja 8":
     print(f'Wprowadzoną odległość w milach przeliczono na {operacja8:.2f} km.')
 else:
     print(f'Nie ma takiej operacji {task}.')
-
