@@ -14,7 +14,7 @@ miesiace = {
     'maj': 31,
     'czerwiec': 30,
     'lipiec': 31,
-    'sierpnień': 31,
+    'sierpień': 31,
     'wrzesień': 31,
     'październik': 31,
     'listopad': 30,
@@ -22,6 +22,11 @@ miesiace = {
 }
 
 odpowiedz = (input('Podaj nazwę miesiąca: '))
+if odpowiedz in miesiace:
+    pass
+else:
+    print(f'Nie ma takiego miesiąca {odpowiedz}')
+    quit()
 
 if odpowiedz == 'luty':
     rok = int(input('Podaj rok: '))
@@ -31,8 +36,8 @@ if odpowiedz == 'luty':
         pass
 else:
     pass
-
 print(f'Miesiąc {odpowiedz} ma {miesiace.get(odpowiedz)} dni.')
+
 
 """ 
 tu pomysł z napisaniem funkcj zwracajacej true/false - zamysl byl taki, zeby odpowiedz luty odpalala funkcje
@@ -47,10 +52,8 @@ rok_przestepny(rok)
 if rok_przestepny(rok) == True:
     miesiace['luty'] = 29
 else:
-    miesiace['luty'] = 28
+    pass
             
 """
-
-
 
 # rok_przestepny()
