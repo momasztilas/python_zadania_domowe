@@ -32,6 +32,8 @@ lista_liczb = [10, 20, 30, 40, 1000, 34, 69, 420, 888]
 print(f'Wejściowa lista liczb to: {lista_liczb}')
 lista_liczb.sort()
 print(f'Lista liczb po sortowaniu (asc): {lista_liczb}')
+
+
 # suma liczb
 
 def suma(lista_liczb: list) -> float:
@@ -95,7 +97,7 @@ def min_maks_diff(lista_liczb: list) -> float:
     """
     lista_liczb.sort()
     minimum = lista_liczb[0]
-    if lista_liczb is None:  # czy to zadziała jak powinno? Nie bardzo rozumiem polecenie z 0 gdy tablica bedzie pusta
+    if not lista_liczb:  # czy to zadziała jak powinno? Nie bardzo rozumiem polecenie z 0 gdy tablica bedzie pusta
         return 0
     else:
         return float(maksimum(lista_liczb) - minimum)
@@ -104,5 +106,47 @@ def min_maks_diff(lista_liczb: list) -> float:
 lista_liczb.sort()
 
 print(f'Różnica skrajnych wartości z listy {lista_liczb} to {min_maks_diff(lista_liczb)}')
+
+
 # powyższy print wypisuje liste posortowana po pierwszym sorcie w funkcji maksimum, czy jest opcja na obejście tego?
-# wykorzystalem podwojne sortowanie - na poczatku przed funkcjami i po funkcjach
+# chodzi o sortowanie list lokalnie dla kazdej z funkcji
+# wykorzystalem podwojne sortowanie - na poczatku przed funkcjami i po funkcjach - tu chyba nie do konca ogarnalem list
+# comprehensions na zajeciach, ale ponizej juz uzylem tego sposobu.
+
+
+# wypisz_wieksze(liczby, x) – wypisuje ( print() ) wszystkie te liczby z listy
+# liczby , które są większe od x
+
+def wypisz_wieksze(lista_liczb):
+    liczba = float(input('Podaj liczbę do porównania: '))
+    wieksze = sorted(x for x in lista_liczb if x > liczba)
+    if wieksze:
+        print(f'Liczby większe od {liczba} to {wieksze}.')
+    else:
+        print(f'Na liście liczb nie ma większej wartości od {liczba}')
+        return None
+
+
+wypisz_wieksze(lista_liczb)
+
+
+# pierwsza_wieksza(lista_liczb, x) – zwraca ( return ) pierwszą znalezioną w
+# lista_liczby liczbę większą od x ; zwraca None , jeśli takiej liczby tam nie ma
+
+def pierwsza_wieksza(lista_liczb):
+    liczba = float(input('Podaj liczbę do porównania: '))
+    posortowana = sorted(lista_liczb)
+    first = next(y for y, val in enumerate(posortowana) if val > liczba)
+    if first:
+        print(f'Pierwsza większa liczba od {liczba} to {posortowana[first]}')
+    else:
+        print(f'Na liście liczb nie ma większej wartości od {liczba}')
+        return None
+
+
+# te sorty listy wyzej troche mieszaja mi w szykach - ale jakos wybrnalem
+# mam problem z oddaniem None w funkcji pierwsza_wieksza gdy próbuję wprowadzić do programu wartość większą od
+# najwyższej na liście
+
+pierwsza_wieksza(lista_liczb)
+print(lista_liczb.sort(reverse=False))
