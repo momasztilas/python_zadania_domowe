@@ -52,11 +52,13 @@ def funkcja_max():
 # srednia - oblicza średnią z dwóch liczb
 
 def funkcja_srednia():
-    liczby_srednia = []
-    suma = 0
-    for i in liczby_srednia:
-        suma = suma + i
-    print(f"Średnia arytmetyczna z podanych liczb {liczby_srednia} wynosi: {(suma / len(liczby_srednia)):.2f}")
+    # liczby_srednia = []
+    liczba1 = float(input(f"Podaj liczbę nr 1 :"))
+    liczba2 = float(input(f"Podaj liczbę nr 2 :"))
+    suma = liczba1 + liczba2
+    # for i in liczby_srednia:
+    # suma = suma + i
+    print(f"Średnia arytmetyczna z podanych liczb {liczba1} i {liczba2} wynosi: {(suma /2):.2f}")
 
 
 # pole_kola - oblicza pole koła o podanym promieniu (jeden parametr) podpowiedź:

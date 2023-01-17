@@ -29,6 +29,7 @@ def mymax(liczby):
         if x > max:
             max = x
         return max
+
 def mymin(liczby):
     min = liczby[0]
     for y in liczby:

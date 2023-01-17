@@ -30,7 +30,7 @@ else:
 # to ponizej wciagnac do elifa tam wyzej
 if odpowiedz == 'luty':
     rok = int(input('Podaj rok: '))
-    if rok % 4 == 0 and (rok % 100 != 0 or rok % 400 == 0):
+    if rok % 4 == 0 and (rok % 100 != 0) or (rok % 400 == 0):
         miesiace['luty'] = 29
     else:
         pass
